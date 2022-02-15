@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "enriched-infusions",
+  "version": "${version}",
+  "name": "Enriched Infusions",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/enriched-infusions/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.enrichedmc.infusions.EnrichedInfusionsClient"
+    ],
+    "main": [
+      "com.enrichedmc.infusions.EnrichedInfusions"
+    ]
+  },
+  "mixins": [
+    "enriched-infusions.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.2",
+    "fabric": "*",
+    "minecraft": "1.18.1",
+	"enriched":"*"
+  }
+}
