@@ -15,6 +15,9 @@
     ],
     "main": [
       "com.enrichedmc.infusions.EnrichedInfusions"
+    ],
+	"modmenu": [
+      "com.enrichedmc.infusions.config.ModMenu"
     ]
   },
   "mixins": [

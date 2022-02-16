@@ -6,11 +6,14 @@ import com.enrichedmc.builder.ShapedRecipeBuilder;
 import com.enrichedmc.infusions.config.ModConfig;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
+import org.apache.logging.log4j.Level;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.enrichedmc.infusions.EnrichedInfusions.log;
 
 public class DynamicRecipes {
     public static final Map<Identifier, JsonObject> REGISTRY = new HashMap<>();
@@ -19,23 +22,14 @@ public class DynamicRecipes {
         final List<Pair<Identifier, JsonObject>> enabledFeatures = new ArrayList<>();
 
         if (config.enableEmeraldSteelGear) {
-            enabledFeatures.add(pickaxe_tag("emerald_steel_pickaxe", "c:steel_ingots", "enriched-infusions:emerald_steel_pickaxe"));
-            enabledFeatures.add(sword_tag("emerald_steel_sword", "c:steel_ingots", "enriched-infusions:emerald_steel_sword"));
-            enabledFeatures.add(axe_tag("emerald_steel_axe", "c:steel_ingots", "enriched-infusions:emerald_steel_axe"));
-            enabledFeatures.add(shovel_tag("emerald_steel_shovel", "c:steel_ingots", "enriched-infusions:emerald_steel_shovel"));
-            enabledFeatures.add(hoe_tag("emerald_steel_hoe", "c:steel_ingots", "enriched-infusions:emerald_steel_hoe"));
-            enabledFeatures.add(helmet_tag("emerald_steel_helmet", "c:steel_ingots", "enriched-infusions:emerald_steel_helmet"));
-            enabledFeatures.add(chestplate_tag("emerald_steel_chestplate", "c:steel_ingots", "enriched-infusions:emerald_steel_chestplate"));
-            enabledFeatures.add(leggings_tag("emerald_steel_leggings", "c:steel_ingots", "enriched-infusions:emerald_steel_leggings"));
-            enabledFeatures.add(boots_tag("emerald_steel_boots", "c:steel_ingots", "enriched-infusions:emerald_steel_boots"));
-            enabledFeatures.add(blend("emerald_steel_blend", "minecraft:iron_ingot", "minecraft:coal", "enriched-infusions:emerald_steel_ingot"));
-            enabledFeatures.add(blasting("steel_ingot_blasting", "enriched:steel_blend", "enriched:steel_ingot", 0.7, 100));
-            enabledFeatures.add(block("emerald_steel_block", "enriched:steel_ingot", "enriched-infusions:emerald_steel_block", 1));
-            enabledFeatures.add(uncrafting("emerald_steel_ingot", "enriched:steel_block", "enriched-infusions:emerald_infused_steel_ingot", 9));
+
+            enabledFeatures.add(smithing("emerald_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:emerald", "enriched:emerald_steel_pickaxe"));
         }
 
 
         enabledFeatures.forEach(it -> REGISTRY.put(it.getLeft(), it.getRight()));
+
+        log(Level.INFO, "Loaded recipes");
     }
 
     private static Pair<Identifier, JsonObject> pickaxe(String name, String item, String result) {
@@ -304,6 +298,29 @@ public class DynamicRecipes {
         json.addProperty("result", output);
         json.addProperty("experience", experience);
         json.addProperty("cookingtime", cookingTime);
+
+        return new Pair<>(identifier, json);
+    }
+
+
+    private static Pair<Identifier, JsonObject> smithing(
+            String name, String input, String input2,  String output) {
+        final Identifier identifier = Enriched.identifier(name);
+        final JsonObject json = new JsonObject();
+        json.addProperty("type", "minecraft:smithing");
+
+        final JsonObject base = new JsonObject();
+        json.add("base", base);
+        base.addProperty("item",input);
+
+        final JsonObject addition = new JsonObject();
+        json.add("addition", addition);
+        addition.addProperty("item", input2);
+
+        final JsonObject result = new JsonObject();
+        json.add("result", result);
+        result.addProperty("item", output);
+
 
         return new Pair<>(identifier, json);
     }
