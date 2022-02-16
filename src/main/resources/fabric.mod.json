@@ -3,7 +3,7 @@
   "id": "enriched-infusions",
   "version": "${version}",
   "name": "Enriched Infusions",
-  "description": "",
+  "description": "An addon mod for Enriched that adds infused tools and armors.",
   "authors": [],
   "contact": {},
   "license": "MIT",

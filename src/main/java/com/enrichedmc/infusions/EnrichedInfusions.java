@@ -27,7 +27,7 @@ public class EnrichedInfusions implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        log(Level.INFO, "Hello there!");
+        log(Level.INFO, "This is where the fun begins!");
         //Config
         AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
         ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();

@@ -1,9 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.enrichedmc.infusions.enrichedinfusions.mixin",
+  "package": "com.enrichedmc.infusions.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [
+  "mixins": [RecipeManagerMixin
   ],
   "client": [
   ],

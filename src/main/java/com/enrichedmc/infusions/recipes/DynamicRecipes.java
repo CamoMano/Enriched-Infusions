@@ -20,12 +20,12 @@ public class DynamicRecipes {
 
     public static void register(ModConfig config) {
         final List<Pair<Identifier, JsonObject>> enabledFeatures = new ArrayList<>();
-
         if (config.enableEmeraldSteelGear) {
 
             enabledFeatures.add(smithing("emerald_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:emerald", "enriched:emerald_steel_pickaxe"));
+            enabledFeatures.add(smithing("emerald_infused_pickaxe", "enriched:steel_sword", "minecraft:emerald", "enriched:emerald_steel_sword"));
+            log(Level.INFO, "ELLO");
         }
-
 
         enabledFeatures.forEach(it -> REGISTRY.put(it.getLeft(), it.getRight()));
 
@@ -285,8 +285,7 @@ public class DynamicRecipes {
     }
 
     private static Pair<Identifier, JsonObject> smelting(
-            String name, String input, String output, double experience, int cookingTime
-    ) {
+            String name, String input, String output, double experience, int cookingTime) {
         final Identifier identifier = Enriched.identifier(name);
         final JsonObject json = new JsonObject();
         json.addProperty("type", "minecraft:smelting");
@@ -304,22 +303,22 @@ public class DynamicRecipes {
 
 
     private static Pair<Identifier, JsonObject> smithing(
-            String name, String input, String input2,  String output) {
+            String name, String input, String upgrade,  String output) {
         final Identifier identifier = Enriched.identifier(name);
         final JsonObject json = new JsonObject();
         json.addProperty("type", "minecraft:smithing");
 
         final JsonObject base = new JsonObject();
-        json.add("base", base);
         base.addProperty("item",input);
+        json.add("base", base);
 
         final JsonObject addition = new JsonObject();
         json.add("addition", addition);
-        addition.addProperty("item", input2);
+        addition.addProperty("item", upgrade);
 
         final JsonObject result = new JsonObject();
-        json.add("result", result);
         result.addProperty("item", output);
+        json.add("result", result);
 
 
         return new Pair<>(identifier, json);

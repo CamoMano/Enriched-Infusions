@@ -10,7 +10,7 @@ public class ModConfig implements ConfigData {
     //Resources
     @ConfigEntry.Category("Resources")
     @ConfigEntry.Gui.Tooltip()
-    public static boolean enableEmeraldSteelGear = true;
+    public boolean enableEmeraldSteelGear = true;
 
 }
 
