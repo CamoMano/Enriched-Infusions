@@ -21,11 +21,63 @@ public class DynamicRecipes {
     public static void register(ModConfig config) {
         final List<Pair<Identifier, JsonObject>> enabledFeatures = new ArrayList<>();
         if (config.enableEmeraldSteelGear) {
+            enabledFeatures.add(smithing("emerald_steel_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:emerald", "enriched:emerald_steel_pickaxe"));
+            enabledFeatures.add(smithing("emerald_steel_infused_sword", "enriched:steel_sword", "minecraft:emerald", "enriched:emerald_steel_sword"));
+            enabledFeatures.add(smithing("emerald_steel_infused_shovel", "enriched:steel_shovel", "minecraft:emerald", "enriched:emerald_steel_shovel"));
+            enabledFeatures.add(smithing("emerald_steel_infused_hoe", "enriched:steel_hoe", "minecraft:emerald", "enriched:emerald_steel_hoe"));
+            enabledFeatures.add(smithing("emerald_steel_infused_axe", "enriched:steel_axe", "minecraft:emerald", "enriched:emerald_steel_axe"));
 
-            enabledFeatures.add(smithing("emerald_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:emerald", "enriched:emerald_steel_pickaxe"));
-            enabledFeatures.add(smithing("emerald_infused_pickaxe", "enriched:steel_sword", "minecraft:emerald", "enriched:emerald_steel_sword"));
-            log(Level.INFO, "ELLO");
+            enabledFeatures.add(smithing("emerald_steel_infused_helmet", "enriched:steel_helmet", "minecraft:emerald", "enriched:emerald_steel_helmet"));
+            enabledFeatures.add(smithing("emerald_steel_infused_chestplate", "enriched:steel_chestplate", "minecraft:emerald", "enriched:emerald_steel_chestplate"));
+            enabledFeatures.add(smithing("emerald_steel_infused_leggings", "enriched:steel_leggings", "minecraft:emerald", "enriched:emerald_steel_leggings"));
+            enabledFeatures.add(smithing("emerald_steel_infused_boots", "enriched:steel_boots", "minecraft:emerald", "enriched:emerald_steel_boots"));
         }
+
+        enabledFeatures.add(smithing("sapphire_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:sapphire", "enriched:sapphire_steel_pickaxe"));
+        enabledFeatures.add(smithing("sapphire_steel_infused_sword", "enriched:steel_sword", "enriched:sapphire", "enriched:sapphire_steel_sword"));
+        enabledFeatures.add(smithing("sapphire_steel_infused_shovel", "enriched:steel_shovel", "enriched:sapphire", "enriched:sapphire_steel_shovel"));
+        enabledFeatures.add(smithing("sapphire_steel_infused_hoe", "enriched:steel_hoe", "enriched:sapphire", "enriched:sapphire_steel_hoe"));
+        enabledFeatures.add(smithing("sapphire_steel_infused_axe", "enriched:steel_axe", "enriched:sapphire", "enriched:sapphire_steel_axe"));
+
+        enabledFeatures.add(smithing("sapphire_steel_infused_helmet", "enriched:steel_helmet", "enriched:sapphire", "enriched:sapphire_steel_helmet"));
+        enabledFeatures.add(smithing("sapphire_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:sapphire", "enriched:sapphire_steel_chestplate"));
+        enabledFeatures.add(smithing("sapphire_steel_infused_leggings", "enriched:steel_leggings", "enriched:sapphire", "enriched:sapphire_steel_leggings"));
+        enabledFeatures.add(smithing("sapphire_steel_infused_boots", "enriched:steel_boots", "enriched:sapphire", "enriched:sapphire_steel_boots"));
+
+
+        enabledFeatures.add(smithing("ruby_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:ruby", "enriched:ruby_steel_pickaxe"));
+        enabledFeatures.add(smithing("ruby_steel_infused_sword", "enriched:steel_sword", "enriched:ruby", "enriched:ruby_steel_sword"));
+        enabledFeatures.add(smithing("ruby_steel_infused_shovel", "enriched:steel_shovel", "enriched:ruby", "enriched:ruby_steel_shovel"));
+        enabledFeatures.add(smithing("ruby_steel_infused_hoe", "enriched:steel_hoe", "enriched:ruby", "enriched:ruby_steel_hoe"));
+        enabledFeatures.add(smithing("ruby_steel_infused_axe", "enriched:steel_axe", "enriched:ruby", "enriched:ruby_steel_axe"));
+
+        enabledFeatures.add(smithing("ruby_steel_infused_helmet", "enriched:steel_helmet", "enriched:ruby", "enriched:ruby_steel_helmet"));
+        enabledFeatures.add(smithing("ruby_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:ruby", "enriched:ruby_steel_chestplate"));
+        enabledFeatures.add(smithing("ruby_steel_infused_leggings", "enriched:steel_leggings", "enriched:ruby", "enriched:ruby_steel_leggings"));
+        enabledFeatures.add(smithing("ruby_steel_infused_boots", "enriched:steel_boots", "enriched:ruby", "enriched:ruby_steel_boots"));
+
+        enabledFeatures.add(smithing("tanzanite_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:tanzanite", "enriched:tanzanite_steel_pickaxe"));
+        enabledFeatures.add(smithing("tanzanite_steel_infused_sword", "enriched:steel_sword", "enriched:tanzanite", "enriched:tanzanite_steel_sword"));
+        enabledFeatures.add(smithing("tanzanite_steel_infused_shovel", "enriched:steel_shovel", "enriched:tanzanite", "enriched:tanzanite_steel_shovel"));
+        enabledFeatures.add(smithing("tanzanite_steel_infused_hoe", "enriched:steel_hoe", "enriched:tanzanite", "enriched:tanzanite_steel_hoe"));
+        enabledFeatures.add(smithing("tanzanite_steel_infused_axe", "enriched:steel_axe", "enriched:tanzanite", "enriched:tanzanite_steel_axe"));
+
+        enabledFeatures.add(smithing("tanzanite_steel_infused_helmet", "enriched:steel_helmet", "enriched:tanzanite", "enriched:tanzanite_steel_helmet"));
+        enabledFeatures.add(smithing("tanzanite_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:tanzanite", "enriched:tanzanite_steel_chestplate"));
+        enabledFeatures.add(smithing("tanzanite_steel_infused_leggings", "enriched:steel_leggings", "enriched:tanzanite", "enriched:tanzanite_steel_leggings"));
+        enabledFeatures.add(smithing("tanzanite_steel_infused_boots", "enriched:steel_boots", "enriched:tanzanite", "enriched:tanzanite_steel_boots"));
+
+
+        enabledFeatures.add(smithing("diamond_steel_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:diamond", "enriched:diamond_steel_pickaxe"));
+        enabledFeatures.add(smithing("diamond_steel_infused_sword", "enriched:steel_sword", "minecraft:diamond", "enriched:diamond_steel_sword"));
+        enabledFeatures.add(smithing("diamond_steel_infused_shovel", "enriched:steel_shovel", "minecraft:diamond", "enriched:diamond_steel_shovel"));
+        enabledFeatures.add(smithing("diamond_steel_infused_hoe", "enriched:steel_hoe", "minecraft:diamond", "enriched:diamond_steel_hoe"));
+        enabledFeatures.add(smithing("diamond_steel_infused_axe", "enriched:steel_axe", "minecraft:diamond", "enriched:diamond_steel_axe"));
+
+        enabledFeatures.add(smithing("diamond_steel_infused_helmet", "enriched:steel_helmet", "minecraft:diamond", "enriched:diamond_steel_helmet"));
+        enabledFeatures.add(smithing("diamond_steel_infused_chestplate", "enriched:steel_chestplate", "minecraft:diamond", "enriched:diamond_steel_chestplate"));
+        enabledFeatures.add(smithing("diamond_steel_infused_leggings", "enriched:steel_leggings", "minecraft:diamond", "enriched:diamond_steel_leggings"));
+        enabledFeatures.add(smithing("diamond_steel_infused_boots", "enriched:steel_boots", "minecraft:diamond", "enriched:diamond_steel_boots"));
 
         enabledFeatures.forEach(it -> REGISTRY.put(it.getLeft(), it.getRight()));
 
