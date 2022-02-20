@@ -9,11 +9,11 @@ import net.minecraft.sound.SoundEvents;
 
 public class ArmorMaterialTanzaniteObsidian implements ArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNTS = new int[]{3, 7, 8, 3};
+    private static final int[] PROTECTION_AMOUNTS = new int[]{3, 6, 8, 3};
 
     @Override
     public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * 35;
+        return BASE_DURABILITY[slot.getEntitySlotId()] * 40;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class ArmorMaterialTanzaniteObsidian implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return "obsidian";
+        return "tanzanite_obsidian";
     }
 
     @Override

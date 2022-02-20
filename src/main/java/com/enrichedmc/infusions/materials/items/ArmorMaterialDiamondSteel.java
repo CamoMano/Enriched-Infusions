@@ -13,7 +13,7 @@ public class ArmorMaterialDiamondSteel implements ArmorMaterial {
 
     @Override
     public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * 25;
+        return BASE_DURABILITY[slot.getEntitySlotId()] * 30;
     }
 
     @Override
@@ -38,16 +38,16 @@ public class ArmorMaterialDiamondSteel implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return "steel";
+        return "diamond_steel";
     }
 
     @Override
     public float getToughness() {
-        return 1.0f;
+        return 2.0f;
     }
 
     @Override
     public float getKnockbackResistance() {
-        return 0;
+        return 2;
     }
 }

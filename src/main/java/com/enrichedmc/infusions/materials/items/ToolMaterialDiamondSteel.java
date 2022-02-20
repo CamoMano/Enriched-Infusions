@@ -7,7 +7,7 @@ import net.minecraft.recipe.Ingredient;
 public class ToolMaterialDiamondSteel implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 850;
+        return 880;
     }
 
     @Override
@@ -32,6 +32,6 @@ public class ToolMaterialDiamondSteel implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 6.0F;
+        return 6.5F;
     }
 }

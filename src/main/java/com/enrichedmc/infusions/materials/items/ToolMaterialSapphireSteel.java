@@ -32,6 +32,6 @@ public class ToolMaterialSapphireSteel implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 6.0F;
+        return 7.0F;
     }
 }

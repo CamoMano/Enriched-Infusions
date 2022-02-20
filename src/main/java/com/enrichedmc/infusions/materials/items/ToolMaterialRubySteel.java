@@ -12,7 +12,7 @@ public class ToolMaterialRubySteel implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 5.0F;
+        return 5.5F;
     }
 
     @Override

@@ -7,7 +7,7 @@ import net.minecraft.recipe.Ingredient;
 public class ToolMaterialTanzaniteSteel implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 850;
+        return 970;
     }
 
     @Override

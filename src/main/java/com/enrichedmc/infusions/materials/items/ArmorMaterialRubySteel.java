@@ -38,12 +38,12 @@ public class ArmorMaterialRubySteel implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return "steel";
+        return "ruby_steel";
     }
 
     @Override
     public float getToughness() {
-        return 1.0f;
+        return 2.0f;
     }
 
     @Override

@@ -13,7 +13,7 @@ public class ArmorMaterialTanzaniteSteel implements ArmorMaterial {
 
     @Override
     public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * 25;
+        return BASE_DURABILITY[slot.getEntitySlotId()] * 28;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class ArmorMaterialTanzaniteSteel implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return "steel";
+        return "tanzanite_steel";
     }
 
     @Override

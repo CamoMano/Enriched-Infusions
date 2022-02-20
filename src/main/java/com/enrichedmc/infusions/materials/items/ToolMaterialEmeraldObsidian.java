@@ -7,12 +7,12 @@ import net.minecraft.recipe.Ingredient;
 public class ToolMaterialEmeraldObsidian implements ToolMaterial {
     @Override
     public int getDurability() {
-        return 850;
+        return 1820;
     }
 
     @Override
     public float getAttackDamage() {
-        return 5.0F;
+        return 4.5F;
     }
 
     @Override
@@ -22,16 +22,16 @@ public class ToolMaterialEmeraldObsidian implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 9;
+        return 25;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModInit.STEEL_INGOT);
+        return Ingredient.ofItems(ModInit.OBSIDIAN_ALLOY_INGOT);
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 6.0F;
+        return 7.0F;
     }
 }

@@ -23,7 +23,7 @@ public class ArmorMaterialEmeraldSteel implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 9;
+        return 25;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class ArmorMaterialEmeraldSteel implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return "steel";
+        return "emerald_steel";
     }
 
     @Override
