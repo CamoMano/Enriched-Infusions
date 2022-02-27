@@ -4,8 +4,13 @@
   "version": "${version}",
   "name": "Enriched Infusions",
   "description": "An addon mod for Enriched that adds infused tools and armors.",
-  "authors": [],
-  "contact": {},
+  "authors": ["CamoMano"],
+  "contributors": ["Rotok_Eralil"],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/enriched-infusions",
+    "sources": "https://github.com/CamoMano/Enriched-Infusions",
+    "issues": "https://github.com/CamoMano/Enriched-Infusions/issues"
+  },
   "license": "MIT",
   "icon": "assets/enriched-infusions/icon.png",
   "environment": "*",
