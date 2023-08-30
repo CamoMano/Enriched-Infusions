@@ -1,6 +1,5 @@
 package com.enrichedmc.infusions.config;
 
-import com.enrichedmc.infusions.config.ModConfig;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.autoconfig.AutoConfig;

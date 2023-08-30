@@ -17,7 +17,7 @@ public class ArmorMaterialDiamondObsidian implements ArmorMaterial {
     }
 
     @Override
-    public int getProtectionAmount(EquipmentSlot slot) {
+    public int getProtection(EquipmentSlot slot) {
         return PROTECTION_AMOUNTS[slot.getEntitySlotId()];
     }
 

@@ -1,11 +1,11 @@
 package com.enrichedmc.infusions.registry;
 
+import static com.enrichedmc.registry.ModInit.item;
+
 import com.enrichedmc.infusions.materials.items.*;
 import com.enrichedmc.items.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
-
-import static com.enrichedmc.registry.ModInit.item;
 
 public class ModInit {
 

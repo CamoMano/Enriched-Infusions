@@ -4,8 +4,12 @@
   "version": "${version}",
   "name": "Enriched Infusions",
   "description": "An addon mod for Enriched that adds infused tools and armors.",
-  "authors": ["CamoMano"],
-  "contributors": ["Rotok_Eralil"],
+  "authors": [
+    "CamoMano"
+  ],
+  "contributors": [
+    "Rotok_Eralil"
+  ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/enriched-infusions",
     "sources": "https://github.com/CamoMano/Enriched-Infusions",
@@ -21,7 +25,7 @@
     "main": [
       "com.enrichedmc.infusions.EnrichedInfusions"
     ],
-	"modmenu": [
+    "modmenu": [
       "com.enrichedmc.infusions.config.ModMenu"
     ]
   },
@@ -32,6 +36,6 @@
     "fabricloader": ">=0.14.9",
     "fabric": "*",
     "minecraft": "1.19.x",
-	"enriched":">=2.4.5"
+    "enriched": ">=3.0.0"
   }
 }

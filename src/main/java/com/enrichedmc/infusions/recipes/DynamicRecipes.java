@@ -1,19 +1,18 @@
 package com.enrichedmc.infusions.recipes;
 
+import static com.enrichedmc.infusions.EnrichedInfusions.log;
+
 import com.enrichedmc.Enriched;
 import com.enrichedmc.builder.ShapedRecipeBuilder;
 import com.enrichedmc.infusions.config.ModConfig;
 import com.google.gson.JsonObject;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.Pair;
-import org.apache.logging.log4j.Level;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.enrichedmc.infusions.EnrichedInfusions.log;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.Pair;
+import org.apache.logging.log4j.Level;
 
 public class DynamicRecipes {
     public static final Map<Identifier, JsonObject> REGISTRY = new HashMap<>();
