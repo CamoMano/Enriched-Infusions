@@ -1,7 +1,7 @@
 package com.enrichedmc.infusions.materials.items;
 
 import com.enrichedmc.registry.ModInit;
-import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
@@ -11,14 +11,15 @@ public class ArmorMaterialDiamondObsidian implements ArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private static final int[] PROTECTION_AMOUNTS = new int[]{3, 6, 8, 3};
 
+
     @Override
-    public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * 38;
+    public int getDurability(ArmorItem.Type type) {
+        return BASE_DURABILITY[type.getEquipmentSlot().getEntitySlotId()] * 38;
     }
 
     @Override
-    public int getProtection(EquipmentSlot slot) {
-        return PROTECTION_AMOUNTS[slot.getEntitySlotId()];
+    public int getProtection(ArmorItem.Type type) {
+        return PROTECTION_AMOUNTS[type.getEquipmentSlot().getEntitySlotId()];
     }
 
     @Override
