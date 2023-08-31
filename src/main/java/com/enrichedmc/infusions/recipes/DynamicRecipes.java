@@ -1,19 +1,18 @@
 package com.enrichedmc.infusions.recipes;
 
+import static com.enrichedmc.infusions.EnrichedInfusions.log;
+
 import com.enrichedmc.Enriched;
 import com.enrichedmc.builder.ShapedRecipeBuilder;
 import com.enrichedmc.infusions.config.ModConfig;
 import com.google.gson.JsonObject;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.Pair;
-import org.apache.logging.log4j.Level;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.enrichedmc.infusions.EnrichedInfusions.log;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.Pair;
+import org.apache.logging.log4j.Level;
 
 public class DynamicRecipes {
     public static final Map<Identifier, JsonObject> REGISTRY = new HashMap<>();
@@ -21,126 +20,126 @@ public class DynamicRecipes {
     public static void register(ModConfig config) {
         final List<Pair<Identifier, JsonObject>> enabledFeatures = new ArrayList<>();
         if (config.enableEmeraldSteelGear) {
-            enabledFeatures.add(smithing("emerald_steel_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:emerald", "enriched:emerald_steel_pickaxe"));
-            enabledFeatures.add(smithing("emerald_steel_infused_sword", "enriched:steel_sword", "minecraft:emerald", "enriched:emerald_steel_sword"));
-            enabledFeatures.add(smithing("emerald_steel_infused_shovel", "enriched:steel_shovel", "minecraft:emerald", "enriched:emerald_steel_shovel"));
-            enabledFeatures.add(smithing("emerald_steel_infused_hoe", "enriched:steel_hoe", "minecraft:emerald", "enriched:emerald_steel_hoe"));
-            enabledFeatures.add(smithing("emerald_steel_infused_axe", "enriched:steel_axe", "minecraft:emerald", "enriched:emerald_steel_axe"));
+            enabledFeatures.add(smithing("emerald_steel_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_pickaxe"));
+            enabledFeatures.add(smithing("emerald_steel_infused_sword", "enriched:steel_sword", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_sword"));
+            enabledFeatures.add(smithing("emerald_steel_infused_shovel", "enriched:steel_shovel", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_shovel"));
+            enabledFeatures.add(smithing("emerald_steel_infused_hoe", "enriched:steel_hoe", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_hoe"));
+            enabledFeatures.add(smithing("emerald_steel_infused_axe", "enriched:steel_axe", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_axe"));
 
-            enabledFeatures.add(smithing("emerald_steel_infused_helmet", "enriched:steel_helmet", "minecraft:emerald", "enriched:emerald_steel_helmet"));
-            enabledFeatures.add(smithing("emerald_steel_infused_chestplate", "enriched:steel_chestplate", "minecraft:emerald", "enriched:emerald_steel_chestplate"));
-            enabledFeatures.add(smithing("emerald_steel_infused_leggings", "enriched:steel_leggings", "minecraft:emerald", "enriched:emerald_steel_leggings"));
-            enabledFeatures.add(smithing("emerald_steel_infused_boots", "enriched:steel_boots", "minecraft:emerald", "enriched:emerald_steel_boots"));
+            enabledFeatures.add(smithing("emerald_steel_infused_helmet", "enriched:steel_helmet", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_helmet"));
+            enabledFeatures.add(smithing("emerald_steel_infused_chestplate", "enriched:steel_chestplate", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_chestplate"));
+            enabledFeatures.add(smithing("emerald_steel_infused_leggings", "enriched:steel_leggings", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_leggings"));
+            enabledFeatures.add(smithing("emerald_steel_infused_boots", "enriched:steel_boots", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_steel_boots"));
         }
         if (config.enableEmeraldObsidianGear) {
-            enabledFeatures.add(smithing("emerald_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "minecraft:emerald", "enriched:emerald_obsidian_pickaxe"));
-            enabledFeatures.add(smithing("emerald_obsidian_infused_sword", "enriched:obsidian_sword", "minecraft:emerald", "enriched:emerald_obsidian_sword"));
-            enabledFeatures.add(smithing("emerald_obsidian_infused_shovel", "enriched:obsidian_shovel", "minecraft:emerald", "enriched:emerald_obsidian_shovel"));
-            enabledFeatures.add(smithing("emerald_obsidian_infused_hoe", "enriched:obsidian_hoe", "minecraft:emerald", "enriched:emerald_obsidian_hoe"));
-            enabledFeatures.add(smithing("emerald_obsidian_infused_axe", "enriched:obsidian_axe", "minecraft:emerald", "enriched:emerald_obsidian_axe"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_pickaxe"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_sword", "enriched:obsidian_sword", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_sword"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_shovel", "enriched:obsidian_shovel", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_shovel"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_hoe", "enriched:obsidian_hoe", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_hoe"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_axe", "enriched:obsidian_axe", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_axe"));
 
-            enabledFeatures.add(smithing("emerald_obsidian_infused_helmet", "enriched:obsidian_helmet", "minecraft:emerald", "enriched:emerald_obsidian_helmet"));
-            enabledFeatures.add(smithing("emerald_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "minecraft:emerald", "enriched:emerald_obsidian_chestplate"));
-            enabledFeatures.add(smithing("emerald_obsidian_infused_leggings", "enriched:obsidian_leggings", "minecraft:emerald", "enriched:emerald_obsidian_leggings"));
-            enabledFeatures.add(smithing("emerald_obsidian_infused_boots", "enriched:obsidian_boots", "minecraft:emerald", "enriched:emerald_obsidian_boots"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_helmet", "enriched:obsidian_helmet", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_helmet"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_chestplate"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_leggings", "enriched:obsidian_leggings", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_leggings"));
+            enabledFeatures.add(smithing("emerald_obsidian_infused_boots", "enriched:obsidian_boots", "minecraft:emerald", "minecraft:netherite_upgrade_smithing_template", "enriched:emerald_obsidian_boots"));
         }
 
         if (config.enableSapphireSteelGear) {
-            enabledFeatures.add(smithing("sapphire_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:sapphire", "enriched:sapphire_steel_pickaxe"));
-            enabledFeatures.add(smithing("sapphire_steel_infused_sword", "enriched:steel_sword", "enriched:sapphire", "enriched:sapphire_steel_sword"));
-            enabledFeatures.add(smithing("sapphire_steel_infused_shovel", "enriched:steel_shovel", "enriched:sapphire", "enriched:sapphire_steel_shovel"));
-            enabledFeatures.add(smithing("sapphire_steel_infused_hoe", "enriched:steel_hoe", "enriched:sapphire", "enriched:sapphire_steel_hoe"));
-            enabledFeatures.add(smithing("sapphire_steel_infused_axe", "enriched:steel_axe", "enriched:sapphire", "enriched:sapphire_steel_axe"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_pickaxe"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_sword", "enriched:steel_sword", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_sword"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_shovel", "enriched:steel_shovel", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_shovel"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_hoe", "enriched:steel_hoe", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_hoe"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_axe", "enriched:steel_axe", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_axe"));
 
-            enabledFeatures.add(smithing("sapphire_steel_infused_helmet", "enriched:steel_helmet", "enriched:sapphire", "enriched:sapphire_steel_helmet"));
-            enabledFeatures.add(smithing("sapphire_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:sapphire", "enriched:sapphire_steel_chestplate"));
-            enabledFeatures.add(smithing("sapphire_steel_infused_leggings", "enriched:steel_leggings", "enriched:sapphire", "enriched:sapphire_steel_leggings"));
-            enabledFeatures.add(smithing("sapphire_steel_infused_boots", "enriched:steel_boots", "enriched:sapphire", "enriched:sapphire_steel_boots"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_helmet", "enriched:steel_helmet", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_helmet"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_chestplate"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_leggings", "enriched:steel_leggings", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_leggings"));
+            enabledFeatures.add(smithing("sapphire_steel_infused_boots", "enriched:steel_boots", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_steel_boots"));
         }
         if (config.enableSapphireObsidianGear) {
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "enriched:sapphire", "enriched:sapphire_obsidian_pickaxe"));
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_sword", "enriched:obsidian_sword", "enriched:sapphire", "enriched:sapphire_obsidian_sword"));
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_shovel", "enriched:obsidian_shovel", "enriched:sapphire", "enriched:sapphire_obsidian_shovel"));
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_hoe", "enriched:obsidian_hoe", "enriched:sapphire", "enriched:sapphire_obsidian_hoe"));
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_axe", "enriched:obsidian_axe", "enriched:sapphire", "enriched:sapphire_obsidian_axe"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_pickaxe"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_sword", "enriched:obsidian_sword", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_sword"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_shovel", "enriched:obsidian_shovel", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_shovel"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_hoe", "enriched:obsidian_hoe", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_hoe"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_axe", "enriched:obsidian_axe", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_axe"));
 
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_helmet", "enriched:obsidian_helmet", "enriched:sapphire", "enriched:sapphire_obsidian_helmet"));
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "enriched:sapphire", "enriched:sapphire_obsidian_chestplate"));
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_leggings", "enriched:obsidian_leggings", "enriched:sapphire", "enriched:sapphire_obsidian_leggings"));
-            enabledFeatures.add(smithing("sapphire_obsidian_infused_boots", "enriched:obsidian_boots", "enriched:sapphire", "enriched:sapphire_obsidian_boots"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_helmet", "enriched:obsidian_helmet", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_helmet"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_chestplate"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_leggings", "enriched:obsidian_leggings", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_leggings"));
+            enabledFeatures.add(smithing("sapphire_obsidian_infused_boots", "enriched:obsidian_boots", "enriched:sapphire", "minecraft:netherite_upgrade_smithing_template", "enriched:sapphire_obsidian_boots"));
         }
         if (config.enableRubySteelGear) {
-            enabledFeatures.add(smithing("ruby_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:ruby", "enriched:ruby_steel_pickaxe"));
-            enabledFeatures.add(smithing("ruby_steel_infused_sword", "enriched:steel_sword", "enriched:ruby", "enriched:ruby_steel_sword"));
-            enabledFeatures.add(smithing("ruby_steel_infused_shovel", "enriched:steel_shovel", "enriched:ruby", "enriched:ruby_steel_shovel"));
-            enabledFeatures.add(smithing("ruby_steel_infused_hoe", "enriched:steel_hoe", "enriched:ruby", "enriched:ruby_steel_hoe"));
-            enabledFeatures.add(smithing("ruby_steel_infused_axe", "enriched:steel_axe", "enriched:ruby", "enriched:ruby_steel_axe"));
+            enabledFeatures.add(smithing("ruby_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_pickaxe"));
+            enabledFeatures.add(smithing("ruby_steel_infused_sword", "enriched:steel_sword", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_sword"));
+            enabledFeatures.add(smithing("ruby_steel_infused_shovel", "enriched:steel_shovel", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_shovel"));
+            enabledFeatures.add(smithing("ruby_steel_infused_hoe", "enriched:steel_hoe", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_hoe"));
+            enabledFeatures.add(smithing("ruby_steel_infused_axe", "enriched:steel_axe", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_axe"));
 
-            enabledFeatures.add(smithing("ruby_steel_infused_helmet", "enriched:steel_helmet", "enriched:ruby", "enriched:ruby_steel_helmet"));
-            enabledFeatures.add(smithing("ruby_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:ruby", "enriched:ruby_steel_chestplate"));
-            enabledFeatures.add(smithing("ruby_steel_infused_leggings", "enriched:steel_leggings", "enriched:ruby", "enriched:ruby_steel_leggings"));
-            enabledFeatures.add(smithing("ruby_steel_infused_boots", "enriched:steel_boots", "enriched:ruby", "enriched:ruby_steel_boots"));
+            enabledFeatures.add(smithing("ruby_steel_infused_helmet", "enriched:steel_helmet", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_helmet"));
+            enabledFeatures.add(smithing("ruby_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_chestplate"));
+            enabledFeatures.add(smithing("ruby_steel_infused_leggings", "enriched:steel_leggings", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_leggings"));
+            enabledFeatures.add(smithing("ruby_steel_infused_boots", "enriched:steel_boots", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_steel_boots"));
         }
         if (config.enableRubyObsidianGear) {
-            enabledFeatures.add(smithing("ruby_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "enriched:ruby", "enriched:ruby_obsidian_pickaxe"));
-            enabledFeatures.add(smithing("ruby_obsidian_infused_sword", "enriched:obsidian_sword", "enriched:ruby", "enriched:ruby_obsidian_sword"));
-            enabledFeatures.add(smithing("ruby_obsidian_infused_shovel", "enriched:obsidian_shovel", "enriched:ruby", "enriched:ruby_obsidian_shovel"));
-            enabledFeatures.add(smithing("ruby_obsidian_infused_hoe", "enriched:obsidian_hoe", "enriched:ruby", "enriched:ruby_obsidian_hoe"));
-            enabledFeatures.add(smithing("ruby_obsidian_infused_axe", "enriched:obsidian_axe", "enriched:ruby", "enriched:ruby_obsidian_axe"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_pickaxe"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_sword", "enriched:obsidian_sword", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_sword"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_shovel", "enriched:obsidian_shovel", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_shovel"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_hoe", "enriched:obsidian_hoe", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_hoe"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_axe", "enriched:obsidian_axe", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_axe"));
 
-            enabledFeatures.add(smithing("ruby_obsidian_infused_helmet", "enriched:obsidian_helmet", "enriched:ruby", "enriched:ruby_obsidian_helmet"));
-            enabledFeatures.add(smithing("ruby_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "enriched:ruby", "enriched:ruby_obsidian_chestplate"));
-            enabledFeatures.add(smithing("ruby_obsidian_infused_leggings", "enriched:obsidian_leggings", "enriched:ruby", "enriched:ruby_obsidian_leggings"));
-            enabledFeatures.add(smithing("ruby_obsidian_infused_boots", "enriched:obsidian_boots", "enriched:ruby", "enriched:ruby_obsidian_boots"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_helmet", "enriched:obsidian_helmet", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_helmet"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_chestplate"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_leggings", "enriched:obsidian_leggings", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_leggings"));
+            enabledFeatures.add(smithing("ruby_obsidian_infused_boots", "enriched:obsidian_boots", "enriched:ruby", "minecraft:netherite_upgrade_smithing_template", "enriched:ruby_obsidian_boots"));
         }
         if (config.enableTanzaniteSteelGear) {
-            enabledFeatures.add(smithing("tanzanite_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:tanzanite", "enriched:tanzanite_steel_pickaxe"));
-            enabledFeatures.add(smithing("tanzanite_steel_infused_sword", "enriched:steel_sword", "enriched:tanzanite", "enriched:tanzanite_steel_sword"));
-            enabledFeatures.add(smithing("tanzanite_steel_infused_shovel", "enriched:steel_shovel", "enriched:tanzanite", "enriched:tanzanite_steel_shovel"));
-            enabledFeatures.add(smithing("tanzanite_steel_infused_hoe", "enriched:steel_hoe", "enriched:tanzanite", "enriched:tanzanite_steel_hoe"));
-            enabledFeatures.add(smithing("tanzanite_steel_infused_axe", "enriched:steel_axe", "enriched:tanzanite", "enriched:tanzanite_steel_axe"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_pickaxe", "enriched:steel_pickaxe", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_pickaxe"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_sword", "enriched:steel_sword", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_sword"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_shovel", "enriched:steel_shovel", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_shovel"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_hoe", "enriched:steel_hoe", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_hoe"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_axe", "enriched:steel_axe", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_axe"));
 
-            enabledFeatures.add(smithing("tanzanite_steel_infused_helmet", "enriched:steel_helmet", "enriched:tanzanite", "enriched:tanzanite_steel_helmet"));
-            enabledFeatures.add(smithing("tanzanite_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:tanzanite", "enriched:tanzanite_steel_chestplate"));
-            enabledFeatures.add(smithing("tanzanite_steel_infused_leggings", "enriched:steel_leggings", "enriched:tanzanite", "enriched:tanzanite_steel_leggings"));
-            enabledFeatures.add(smithing("tanzanite_steel_infused_boots", "enriched:steel_boots", "enriched:tanzanite", "enriched:tanzanite_steel_boots"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_helmet", "enriched:steel_helmet", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_helmet"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_chestplate", "enriched:steel_chestplate", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_chestplate"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_leggings", "enriched:steel_leggings", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_leggings"));
+            enabledFeatures.add(smithing("tanzanite_steel_infused_boots", "enriched:steel_boots", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_steel_boots"));
         }
         if (config.enableTanzaniteObsidianGear) {
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "enriched:tanzanite", "enriched:tanzanite_obsidian_pickaxe"));
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_sword", "enriched:obsidian_sword", "enriched:tanzanite", "enriched:tanzanite_obsidian_sword"));
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_shovel", "enriched:obsidian_shovel", "enriched:tanzanite", "enriched:tanzanite_obsidian_shovel"));
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_hoe", "enriched:obsidian_hoe", "enriched:tanzanite", "enriched:tanzanite_obsidian_hoe"));
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_axe", "enriched:obsidian_axe", "enriched:tanzanite", "enriched:tanzanite_obsidian_axe"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_pickaxe"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_sword", "enriched:obsidian_sword", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_sword"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_shovel", "enriched:obsidian_shovel", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_shovel"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_hoe", "enriched:obsidian_hoe", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_hoe"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_axe", "enriched:obsidian_axe", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_axe"));
 
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_helmet", "enriched:obsidian_helmet", "enriched:tanzanite", "enriched:tanzanite_obsidian_helmet"));
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "enriched:tanzanite", "enriched:tanzanite_obsidian_chestplate"));
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_leggings", "enriched:obsidian_leggings", "enriched:tanzanite", "enriched:tanzanite_obsidian_leggings"));
-            enabledFeatures.add(smithing("tanzanite_obsidian_infused_boots", "enriched:obsidian_boots", "enriched:tanzanite", "enriched:tanzanite_obsidian_boots"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_helmet", "enriched:obsidian_helmet", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_helmet"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_chestplate"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_leggings", "enriched:obsidian_leggings", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_leggings"));
+            enabledFeatures.add(smithing("tanzanite_obsidian_infused_boots", "enriched:obsidian_boots", "enriched:tanzanite", "minecraft:netherite_upgrade_smithing_template", "enriched:tanzanite_obsidian_boots"));
         }
 
         if (config.enableDiamondSteelGear) {
-            enabledFeatures.add(smithing("diamond_steel_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:diamond", "enriched:diamond_steel_pickaxe"));
-            enabledFeatures.add(smithing("diamond_steel_infused_sword", "enriched:steel_sword", "minecraft:diamond", "enriched:diamond_steel_sword"));
-            enabledFeatures.add(smithing("diamond_steel_infused_shovel", "enriched:steel_shovel", "minecraft:diamond", "enriched:diamond_steel_shovel"));
-            enabledFeatures.add(smithing("diamond_steel_infused_hoe", "enriched:steel_hoe", "minecraft:diamond", "enriched:diamond_steel_hoe"));
-            enabledFeatures.add(smithing("diamond_steel_infused_axe", "enriched:steel_axe", "minecraft:diamond", "enriched:diamond_steel_axe"));
+            enabledFeatures.add(smithing("diamond_steel_infused_pickaxe", "enriched:steel_pickaxe", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_pickaxe"));
+            enabledFeatures.add(smithing("diamond_steel_infused_sword", "enriched:steel_sword", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_sword"));
+            enabledFeatures.add(smithing("diamond_steel_infused_shovel", "enriched:steel_shovel", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_shovel"));
+            enabledFeatures.add(smithing("diamond_steel_infused_hoe", "enriched:steel_hoe", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_hoe"));
+            enabledFeatures.add(smithing("diamond_steel_infused_axe", "enriched:steel_axe", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_axe"));
 
-            enabledFeatures.add(smithing("diamond_steel_infused_helmet", "enriched:steel_helmet", "minecraft:diamond", "enriched:diamond_steel_helmet"));
-            enabledFeatures.add(smithing("diamond_steel_infused_chestplate", "enriched:steel_chestplate", "minecraft:diamond", "enriched:diamond_steel_chestplate"));
-            enabledFeatures.add(smithing("diamond_steel_infused_leggings", "enriched:steel_leggings", "minecraft:diamond", "enriched:diamond_steel_leggings"));
-            enabledFeatures.add(smithing("diamond_steel_infused_boots", "enriched:steel_boots", "minecraft:diamond", "enriched:diamond_steel_boots"));
+            enabledFeatures.add(smithing("diamond_steel_infused_helmet", "enriched:steel_helmet", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_helmet"));
+            enabledFeatures.add(smithing("diamond_steel_infused_chestplate", "enriched:steel_chestplate", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_chestplate"));
+            enabledFeatures.add(smithing("diamond_steel_infused_leggings", "enriched:steel_leggings", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_leggings"));
+            enabledFeatures.add(smithing("diamond_steel_infused_boots", "enriched:steel_boots", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_steel_boots"));
         }
         if (config.enableDiamondObsidianGear) {
-            enabledFeatures.add(smithing("diamond_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "minecraft:diamond", "enriched:diamond_obsidian_pickaxe"));
-            enabledFeatures.add(smithing("diamond_obsidian_infused_sword", "enriched:obsidian_sword", "minecraft:diamond", "enriched:diamond_obsidian_sword"));
-            enabledFeatures.add(smithing("diamond_obsidian_infused_shovel", "enriched:obsidian_shovel", "minecraft:diamond", "enriched:diamond_obsidian_shovel"));
-            enabledFeatures.add(smithing("diamond_obsidian_infused_hoe", "enriched:obsidian_hoe", "minecraft:diamond", "enriched:diamond_obsidian_hoe"));
-            enabledFeatures.add(smithing("diamond_obsidian_infused_axe", "enriched:obsidian_axe", "minecraft:diamond", "enriched:diamond_obsidian_axe"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_pickaxe", "enriched:obsidian_pickaxe", "minecraft:diamond","minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_pickaxe"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_sword", "enriched:obsidian_sword", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_sword"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_shovel", "enriched:obsidian_shovel", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_shovel"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_hoe", "enriched:obsidian_hoe", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_hoe"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_axe", "enriched:obsidian_axe", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_axe"));
 
-            enabledFeatures.add(smithing("diamond_obsidian_infused_helmet", "enriched:obsidian_helmet", "minecraft:diamond", "enriched:diamond_obsidian_helmet"));
-            enabledFeatures.add(smithing("diamond_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "minecraft:diamond", "enriched:diamond_obsidian_chestplate"));
-            enabledFeatures.add(smithing("diamond_obsidian_infused_leggings", "enriched:obsidian_leggings", "minecraft:diamond", "enriched:diamond_obsidian_leggings"));
-            enabledFeatures.add(smithing("diamond_obsidian_infused_boots", "enriched:obsidian_boots", "minecraft:diamond", "enriched:diamond_obsidian_boots"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_helmet", "enriched:obsidian_helmet", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_helmet"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_chestplate", "enriched:obsidian_chestplate", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_chestplate"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_leggings", "enriched:obsidian_leggings", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_leggings"));
+            enabledFeatures.add(smithing("diamond_obsidian_infused_boots", "enriched:obsidian_boots", "minecraft:diamond", "minecraft:netherite_upgrade_smithing_template", "enriched:diamond_obsidian_boots"));
         }
 
         enabledFeatures.forEach(it -> REGISTRY.put(it.getLeft(), it.getRight()));
@@ -425,18 +424,22 @@ public class DynamicRecipes {
 
 
     private static Pair<Identifier, JsonObject> smithing(
-            String name, String input, String upgrade, String output) {
+            String name, String input, String upgrade, String template, String output) {
         final Identifier identifier = Enriched.identifier(name);
         final JsonObject json = new JsonObject();
-        json.addProperty("type", "minecraft:smithing");
+        json.addProperty("type", "minecraft:smithing_transform");
+
+        final JsonObject addition = new JsonObject();
+        addition.addProperty("item", upgrade);
+        json.add("addition", addition);
 
         final JsonObject base = new JsonObject();
         base.addProperty("item", input);
         json.add("base", base);
 
-        final JsonObject addition = new JsonObject();
-        json.add("addition", addition);
-        addition.addProperty("item", upgrade);
+        final JsonObject templateitem = new JsonObject();
+        templateitem.addProperty("item", template);
+        json.add("template", templateitem);
 
         final JsonObject result = new JsonObject();
         result.addProperty("item", output);
